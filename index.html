@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+  <!-- Bootstrap and other Styles-->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <title>CrystalsCollector-Game</title>
+
+</head>
+
+<body>
+  <div class="container">
+    <!-- Using grids and rows on the body-->
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="panel panel-default">
+          <!-- Header-->
+          <div class="panel-body">
+            <h2>Crystals Collector!</h2>
+          </div>
+          <!-- Instructions div and calling it with an ID-->
+          <div id="instructions" class="panel-footer">
+            <h3><strong>Instructions:</strong></h3>
+            <p>You will be given a random number at the start of the game.
+              <br>There are four crystals below.
+              <br>By clicking on a crystal you will add a specific amount of points to your total score.
+              <br> You win the game by matching your total score to the random number.
+              <br>You lose the game if your total score goes above the random number.
+              <br>The value of each crystal is hidden from you until you click on it.
+              <br>Each time the game starts, the values of each crystal will change and a new target number will be generated.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="assets/javascript/game.js"></script>
+  <!-- JS scripts begins with a class numberbox that has id's of randomnumber, wins and losses called-->
+    <div class="numberBox">
+      <div class="row">
+        <div id="randomNumber" class="col-md-6"></div>
+        <div class="col-md-6">
+          <div id="wins">Wins: </div>
+          <div id="losses">Losses: </div>
+        </div>
+      </div>
+    </div>
+  <!-- A div class buttonimages that has id's of all the crystals-->
+    <div class="buttonImages">
+      <button id="blue-crystal"><img src = "assets/images/blue-crystal.png" width = 60 height = 65></button>
+      <button id="orange-crystal"><img src = "assets/images/orange-crystal.png" width = 60 height = 65></button>
+      <button id="purple-crystal"><img src = "assets/images/purple-crystal.png" width = 60 height = 65></button>
+      <button id="red-diamond"><img src = "assets/images/red-diamond.png" width = 60 height =  65></button>
+    </div>
+
+    <div id="totalScore" class="row" class="col-md-6"></div>
+  </div>
+
+  <br>
+  <br>
+  <br>
+  <div>
+    <footer> © Avash Chapagain </footer>
+  </div>
+
+</body>
+
+</html>
